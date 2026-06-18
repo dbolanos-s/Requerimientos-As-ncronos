@@ -39,7 +39,9 @@ const processSalesCoffee = async () => {
       $("#example").DataTable().destroy();
     }
 
-    $("#example").DataTable();
+    $("#example").DataTable({
+      columnDefs: [{ orderable: false, targets: 0 }],
+    });
   } else {
     alert(result.body);
   }
