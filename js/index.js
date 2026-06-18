@@ -48,9 +48,7 @@ const processSalesCoffee = async () => {
       <th>Momento del día</th>
     `;
 
-    $("#example").DataTable({
-      columnDefs: [{ orderable: false, targets: 0 }],
-    });
+    $("#example").DataTable();
   } else {
     alert(result.body);
   }

@@ -40,16 +40,9 @@ body {
 /* Fix DataTables sort arrows broken by TailwindCSS v4 preflight */
 table.dataTable thead .sorting,
 table.dataTable thead .sorting_asc,
-table.dataTable thead .sorting_desc,
-table.dataTable thead .sorting_asc_disabled,
-table.dataTable thead .sorting_desc_disabled {
+table.dataTable thead .sorting_desc {
   background-repeat: no-repeat !important;
-  background-position: center right 8px !important;
-}
-
-table.dataTable thead .sorting_disabled {
-  background-image: none !important;
-  cursor: default !important;
+  background-position: top 50% right 8px !important;
 }
 
 #example tbody td {
