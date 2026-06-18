@@ -39,7 +39,18 @@ const processSalesCoffee = async () => {
       $("#example").DataTable().destroy();
     }
 
-    $("#example").DataTable();
+    document.querySelector("#example thead tr").innerHTML = `
+      <th>Producto</th>
+      <th>Precio</th>
+      <th>Fecha</th>
+      <th>Hora</th>
+      <th>Tipo de pago</th>
+      <th>Momento del día</th>
+    `;
+
+    $("#example").DataTable({
+      columnDefs: [{ orderable: false, targets: 0 }],
+    });
   } else {
     alert(result.body);
   }
